@@ -1,0 +1,193 @@
+---
+import MainLayout from '../layouts/main-layout.astro'
+import Button from '../components/button.tsx'
+import ArrowSec from '../icons/arrow-sec.tsx'
+import CallIcon from "../icons/call.tsx"
+
+const services = [
+	{
+		title: 'Project Plan',
+		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+	},
+	{
+		title: 'Interior Work',
+		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+	},
+	{
+		title: 'Realization',
+		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+	},
+]
+
+const reviews = [
+	{
+		img: '/natasha.png',
+		name: 'Nattasha Mith',
+		location: 'Sydney, USA',
+		review: 'Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.'
+	},
+	{
+		img: '/benny.png',
+		name: 'Benny Roll',
+		location: 'Sydney, New York',
+		review: 'Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.'
+	},
+	{
+		img: '/raymond.png',
+		name: 'Raymond Galario',
+		location: 'Sydney, Australia',
+		review: 'Lorem Ipsum is simply dummy text of the typesetting industry. Ipsum has been.'
+	},
+]
+
+const projects = [
+	{
+		img: '/project1.png',
+		name: 'Modern Kitchen',
+		text: 'Decor / Artchitecture'
+	},
+	{
+		img: '/project2.png',
+		name: 'Modern Room Stand',
+		text: 'Decor / Artchitecture'
+	},
+	{
+		img: '/project3.png',
+		name: 'Modern Dining Table',
+		text: 'Decor / Artchitecture'
+	},
+	{
+		img: '/project4.png',
+		name: 'Modern Living Room',
+		text: 'Decor / Artchitecture'
+	},
+]
+---
+
+<MainLayout title = 'Interior Design Home'>
+
+	<!-- Banner -->
+	
+	<section class="w-full bg-hero bg-no-repeat bg-cover h-screen lg:min-h-[110vh] px-12 xl:px-0 flex items-center ">
+		<div class="lg:max-w-[1200px] w-full mx-auto flex flex-col">
+			<h1 class="text-[40px] leading-[50px] md:text-[60px] xl:text-[85px] pb-4 font-dm md:leading-[106.25px] w-full xl:max-w-[50%] text-primary-200"> Let Your Home Be Unique </h1>
+			<p class="text-base md:text-[22px] pb-5 font-jost text-text-gray-200 w-full lg:max-w-[50%]">There are many variations of the passages of lorem Ipsum fromavailable,variations of the passages.</p>
+			<Button text="Get Started"/>
+		</div>
+	</section>
+
+	<!-- Services Section -->
+
+	<section class="lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] justify-between ">
+		{
+			services.map((service) => {
+				return (
+					<div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5">
+						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
+						<p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
+						<a href="/" class="text-text-gray-200 leading-snug text-lg tracking-tight font-jost font-semibold gap-2 py-4 md:py-8 startCenter">Read More <ArrowSec /></a>
+					</div>
+				)
+			})
+		}
+	</section>
+
+	<!-- About Section -->
+
+	<section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 flex flex-col-reverse justify-center items-center lg:grid grid-cols-2 gap-[75px] pt-[100px] lg:pt-[200px]">
+		<div class="flex flex-col gap-8 max-w-[472px] items-center lg:items-start py-6">
+			<h2 class="text-[30px] text-center lg:text-left font-dm tracking-wide leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">We Create The Art Of Stylish Living Stylishly</h2>
+			<p class="text-base md:text-[22px] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.</p>
+			<div class="flex gap-4 pt-3 items-center">
+				<CallIcon/>
+				<p class="flex flex-col text-text-gray-200 font-jost tracking-tight">
+					<span class="text-2xl font-bold leading-9 ">012345678</span>
+					<span class="text-[22px] leading-8">Call Us Anytime</span>
+				</p>
+			</div>
+			<Button text="Get Free Estimate"/>
+		</div>
+
+		<div>
+			<img src="/about-img.png" alt="">
+		</div>
+	</section>
+
+	<!-- What People Think About Us Section -->
+
+	<section class="lg:max-w-[1200px] px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] ">
+	<div class="w-full flex flex-col bg-primary-300 rounded-[48px] px-6 py-[88px]">
+		<h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full lg:max-w-[50%] pb-9 mx-auto">What the People Thinks About Us</h2>
+		<div class="flex flex-col gap-8 lg:gap-10 lg:flex-row justify-between">
+			{
+			reviews.map((rev) => {
+				return (
+					<div class="w-full bg-white max-w-[370px] px-[37px] py-[53px] rounded-3xl mx-auto flex flex-col justify-center gap-4 md:gap-6">
+						<div class="flex flex-col sm:flex-row gap-6 items-center">
+							<img src={rev.img} alt="" />
+							<p class="flex flex-col tracking-tight leading-9">
+								<span class="text-primary-200 text-lg lg:text-[25px] font-dm">{rev.name}</span>
+								<span class="text-text-gray-200 text-base lg:text-lg font-jost">{rev.location}</span>
+							</p>
+						</div>
+						<p class="font-jost tracking-tight leading-8 text-base text-center sm:text-left text-text-gray lg:text-[22px]">{rev.review}</p>
+					</div>
+			)
+		})
+		}
+		</div>
+	</div>
+	</section>
+
+	<!-- Client Logo Section -->
+
+	<section class="lg:max-w-[1200px] px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] ">
+		<div class="w-full flex flex-row justify-between items-center gap-12 max-w-[1200px] overflow-x-scroll no-scrollbar">
+			<img src="/clientLogo1.svg" alt="" />
+			<img src="/clientLogo2.svg" alt="" />
+			<img src="/clientLogo3.svg" alt="" />
+			<img src="/clientLogo4.svg" alt="" />
+			<img src="/clientLogo5.svg" alt="" />
+		</div>
+	</section>
+
+	<!-- Projects Section -->
+
+	<section class="lg:max-w-[1200px] px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] ">
+
+		<h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full lg:max-w-[50%] pb-2 mx-auto">Follow Our Projects</h2>
+		<p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[60%] mx-auto">It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</p>
+		
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-x-[104px] lg:gap-y-[56px] mt-12 lg:mt-[93px]">
+			{
+			projects.map((proj) => {
+				return (
+					<div class="w-full flex flex-col gap-4">
+					<img src={proj.img} alt="" />
+							<p class="flex flex-col tracking-tight leading-9">
+								<span class="text-primary-200 text-lg lg:text-[25px] font-dm">{proj.name}</span>
+								<span class="text-text-gray-200 text-base lg:text-lg font-jost">{proj.text}</span>
+							</p>
+					</div>
+			)
+		})
+		}
+		</div>
+	</section>
+</MainLayout>
+ 
+
+<style>
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+
+</style>
