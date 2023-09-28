@@ -12,9 +12,9 @@ const ArrowSec = () => {
       <path
         d="M2 8.43536L15.7232 8.29851M10.6182 1.91132L17.1412 8.4343L10.4868 15.0887"
         stroke="#CDA274"
-        stroke-width="2"
-        stroke-linecap="square"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="square"
+        strokeLinejoin="round"
       />
     </svg>
   );

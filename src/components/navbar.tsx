@@ -28,9 +28,6 @@ const Navbar = () => {
           <a href="/services" className={linkStyle}>
             Services
           </a>
-          <a href="/" className={linkStyle}>
-            Project
-          </a>
           <a href="/contact" className={linkStyle}>
             Contact Us
           </a>
@@ -75,9 +72,6 @@ const Navbar = () => {
           </a>
           <a href="/services" className={linkStyle}>
             Services
-          </a>
-          <a href="/" className={linkStyle}>
-            Project
           </a>
           <a href="/contact" className={linkStyle}>
             Contact Us

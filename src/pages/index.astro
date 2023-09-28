@@ -3,6 +3,9 @@ import MainLayout from '../layouts/main-layout.astro'
 import Button from '../components/button.tsx'
 import ArrowSec from '../icons/arrow-sec.tsx'
 import CallIcon from "../icons/call.tsx"
+import Experience from '../components/experience.tsx'
+import CountUp from "react-countup";
+
 
 const services = [
 	{
@@ -93,6 +96,10 @@ const experiences = [
 	{
 		num: 15,
 		text:'Active Project'
+	},
+	{
+		num: 95,
+		text:'Happy Customers'
 	},
 ]
 ---
@@ -208,20 +215,12 @@ const experiences = [
 	<section class="w-full bg-primary-300 px-12 xl:px-0 mx-auto mt-[100px] lg:mt-[200px] py-[151px]">
 		<div class="w-full max-w-[1200px] mx-auto flex lg:justify-center items-center overflow-x-scroll no-scrollbar">
 			{
-				experiences.map(exp => {
+				experiences.map((exp, i) => {
 					return(
-						<div class="flex min-w-[243px] flex-col border-r border-primary-100 items-center justify-center gap-4 ">
-							<h5 class="text-primary-100 text-[50px] lg:text-[85px] tracking-widest leading-[70px] font-dm lg:leading-[106.25px] ">{exp.num}</h5>
-							<p class="text-text-gray-200 text-base text-center lg:text-lg font-jost tracking-tight lg:leading-9">{exp.text}</p>
-						</div>
+						<Experience client:load text={exp.text} num={exp.num} i={i} />
 					)
 				})
 			}
-			
-			<div class="flex flex-col min-w-[243px] items-center justify-center gap-4 ">
-				<h5 class="text-primary-100 text-[50px] lg:text-[85px] tracking-widest leading-[70px] font-dm lg:leading-[106.25px] ">95</h5>
-				<p class="text-text-gray-200 text-base text-center lg:text-lg font-jost tracking-tight lg:leading-9">Happy Customers</p>
-			</div>
 		</div>
 	</section>
 </MainLayout>
