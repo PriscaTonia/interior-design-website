@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Logo from "../icons/logo";
-import { useMediaQuery } from "../utils/useMediaQuery";
+import Logo from "../icons/logo.tsx";
+import useMediaQuery from "../utils/useMediaQuery.ts";
 import { motion } from "framer-motion";
 
 const Navbar = () => {

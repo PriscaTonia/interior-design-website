@@ -1,8 +1,8 @@
-import { Facebook } from "../icons/facebook";
-import { Instagram } from "../icons/instagram";
-import { LinkedIn } from "../icons/linkedin";
-import Logo from "../icons/logo";
-import { Twitter } from "../icons/twitter";
+import Facebook from "../icons/facebook.tsx";
+import Instagram from "../icons/instagram.tsx";
+import LinkedIn from "../icons/linkedin.tsx";
+import Logo from "../icons/logo.tsx";
+import Twitter from "../icons/twitter.tsx";
 
 const Footer = () => {
   return (

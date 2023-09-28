@@ -1,7 +1,7 @@
 import React from "react";
-import RightPattern from "../icons/right-quote-pattern";
-import { LeftPattern } from "../icons/left-quote-pattern";
-import Quote from "../icons/quote";
+import RightPattern from "../icons/right-quote-pattern.tsx";
+import LeftPattern from "../icons/left-quote-pattern.tsx";
+import Quote from "../icons/quote.tsx";
 
 export interface QuoteProps {
   text: string;
