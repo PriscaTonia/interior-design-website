@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from "react";
 import CountUp from "react-countup";
 
 const Experience = ({
