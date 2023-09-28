@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Instagram = () => {
+const Instagram = () => {
   return (
     <svg
       width="18"
@@ -16,3 +16,5 @@ export const Instagram = () => {
     </svg>
   );
 };
+
+export default Instagram;

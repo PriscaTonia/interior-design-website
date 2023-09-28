@@ -1,6 +1,6 @@
-import Mail from "../icons/mail";
-import Phone from "../icons/phone";
-import Web from "../icons/web";
+import Mail from "../icons/mail.tsx";
+import Phone from "../icons/phone.tsx";
+import Web from "../icons/web.tsx";
 
 const ContactInfo = () => {
   return (

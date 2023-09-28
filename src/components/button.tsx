@@ -1,6 +1,5 @@
-import React from "react";
-import ArrowSec from "../icons/arrow-sec";
-import ArrowPri from "../icons/arrow-pri";
+import ArrowSec from "../icons/arrow-sec.tsx";
+import ArrowPri from "../icons/arrow-pri.tsx";
 
 export interface ButtonProps {
   variant?: "primary" | "secondary";

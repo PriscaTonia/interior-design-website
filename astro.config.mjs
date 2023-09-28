@@ -1,11 +1,13 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
+// import vercelServerless from "@astrojs/vercel/serverless";
 
-import vercelStatic from "@astrojs/vercel/static";
+import netlify from "@astrojs/netlify/functions";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
-  output: "static",
-  adapter: vercelStatic(),
+  output: "server",
+  adapter: netlify(),
 });

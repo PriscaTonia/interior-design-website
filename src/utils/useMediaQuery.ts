@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useMediaQuery(query: string): boolean {
+function useMediaQuery(query: string): boolean {
   const getMatches = (query: string): boolean => {
     // Prevents SSR issues
     if (typeof window !== "undefined") {
@@ -40,3 +40,5 @@ export function useMediaQuery(query: string): boolean {
 
   return matches;
 }
+
+export default useMediaQuery;

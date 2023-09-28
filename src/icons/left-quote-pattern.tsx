@@ -1,6 +1,4 @@
-import React from "react";
-
-export const LeftPattern = () => {
+const LeftPattern = () => {
   return (
     <svg
       width="202"
@@ -13,8 +11,10 @@ export const LeftPattern = () => {
       <path
         d="M201.5 13H83C44.3401 13 13 44.3401 13 83V371C13 409.66 44.3401 441 83 441H201.5"
         stroke="#F4F0EC"
-        stroke-width="25"
+        strokeWidth="25"
       />
     </svg>
   );
 };
+
+export default LeftPattern;
