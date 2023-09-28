@@ -48,18 +48,51 @@ const projects = [
 	},
 	{
 		img: '/project2.png',
-		name: 'Modern Room Stand',
+		name: 'Modern Bedroom',
 		text: 'Decor / Artchitecture'
 	},
 	{
 		img: '/project3.png',
-		name: 'Modern Dining Table',
+		name: 'Modern Dining Hall',
 		text: 'Decor / Artchitecture'
 	},
 	{
 		img: '/project4.png',
 		name: 'Modern Living Room',
 		text: 'Decor / Artchitecture'
+	},
+]
+
+const clientLogos = [
+	{
+		img: '/clientLogo1.svg',
+	},
+	{
+		img: '/clientLogo2.svg',
+	},
+	{
+		img: '/clientLogo3.svg',
+	},
+	{
+		img: '/clientLogo4.svg',
+	},
+	{
+		img: '/clientLogo5.svg',
+	},
+]
+
+const experiences = [
+	{
+		num: 12,
+		text:'Years Of Experiance'
+	},
+	{
+		num: 85,
+		text:'Success Project'
+	},
+	{
+		num: 15,
+		text:'Active Project'
 	},
 ]
 ---
@@ -85,7 +118,7 @@ const projects = [
 					<div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5">
 						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
 						<p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
-						<a href="/" class="text-text-gray-200 leading-snug text-lg tracking-tight font-jost font-semibold gap-2 py-4 md:py-8 startCenter">Read More <ArrowSec /></a>
+						<a href="/services" class="text-text-gray-200 leading-snug text-lg tracking-tight font-jost font-semibold gap-2 py-4 md:py-8 startCenter">Read More <ArrowSec /></a>
 					</div>
 				)
 			})
@@ -96,7 +129,7 @@ const projects = [
 
 	<section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 flex flex-col-reverse justify-center items-center lg:grid grid-cols-2 gap-[75px] pt-[100px] lg:pt-[200px]">
 		<div class="flex flex-col gap-8 max-w-[472px] items-center lg:items-start py-6">
-			<h2 class="text-[30px] text-center lg:text-left font-dm tracking-wide leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">We Create The Art Of Stylish Living Stylishly</h2>
+			<h2 class="text-[30px] text-center capitalize lg:text-left font-dm tracking-wide leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">We Create The Art Of Stylish Living Stylishly</h2>
 			<p class="text-base md:text-[22px] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.</p>
 			<div class="flex gap-4 pt-3 items-center">
 				<CallIcon/>
@@ -143,21 +176,17 @@ const projects = [
 
 	<section class="lg:max-w-[1200px] px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] ">
 		<div class="w-full flex flex-row justify-between items-center gap-12 max-w-[1200px] overflow-x-scroll no-scrollbar">
-			<img src="/clientLogo1.svg" alt="" />
-			<img src="/clientLogo2.svg" alt="" />
-			<img src="/clientLogo3.svg" alt="" />
-			<img src="/clientLogo4.svg" alt="" />
-			<img src="/clientLogo5.svg" alt="" />
+			{
+				clientLogos.map(logo => <img src={logo.img} alt="" />)
+			}
 		</div>
 	</section>
 
 	<!-- Projects Section -->
 
 	<section class="lg:max-w-[1200px] px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] ">
-
 		<h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full lg:max-w-[50%] pb-2 mx-auto">Follow Our Projects</h2>
 		<p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[60%] mx-auto">It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</p>
-		
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-x-[104px] lg:gap-y-[56px] mt-12 lg:mt-[93px]">
 			{
 			projects.map((proj) => {
@@ -172,6 +201,27 @@ const projects = [
 			)
 		})
 		}
+		</div>
+	</section>
+
+	<!-- Experience Section -->
+	<section class="w-full bg-primary-300 px-12 xl:px-0 mx-auto mt-[100px] lg:mt-[200px] py-[151px]">
+		<div class="w-full max-w-[1200px] mx-auto flex lg:justify-center items-center overflow-x-scroll no-scrollbar">
+			{
+				experiences.map(exp => {
+					return(
+						<div class="flex min-w-[243px] flex-col border-r border-primary-100 items-center justify-center gap-4 ">
+							<h5 class="text-primary-100 text-[50px] lg:text-[85px] tracking-widest leading-[70px] font-dm lg:leading-[106.25px] ">{exp.num}</h5>
+							<p class="text-text-gray-200 text-base text-center lg:text-lg font-jost tracking-tight lg:leading-9">{exp.text}</p>
+						</div>
+					)
+				})
+			}
+			
+			<div class="flex flex-col min-w-[243px] items-center justify-center gap-4 ">
+				<h5 class="text-primary-100 text-[50px] lg:text-[85px] tracking-widest leading-[70px] font-dm lg:leading-[106.25px] ">95</h5>
+				<p class="text-text-gray-200 text-base text-center lg:text-lg font-jost tracking-tight lg:leading-9">Happy Customers</p>
+			</div>
 		</div>
 	</section>
 </MainLayout>

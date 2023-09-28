@@ -11,7 +11,10 @@ const Navbar = () => {
 
   return (
     <div className="max-w-[1200px] px-12 xl:px-0 m-auto w-full py-11 flex justify-between items-center">
-      <Logo />
+      <a href="/">
+        {" "}
+        <Logo />
+      </a>
 
       {/* Nav List for Desktop */}
       {matches && (
@@ -19,16 +22,16 @@ const Navbar = () => {
           <a href="/" className={linkStyle}>
             Home
           </a>
-          <a href="/" className={linkStyle}>
+          <a href="/about" className={linkStyle}>
             About Us
           </a>
-          <a href="/" className={linkStyle}>
+          <a href="/services" className={linkStyle}>
             Services
           </a>
           <a href="/" className={linkStyle}>
             Project
           </a>
-          <a href="/" className={linkStyle}>
+          <a href="/contact" className={linkStyle}>
             Contact Us
           </a>
         </nav>
@@ -67,16 +70,16 @@ const Navbar = () => {
           <a href="/" className={linkStyle}>
             Home
           </a>
-          <a href="/" className={linkStyle}>
+          <a href="/about" className={linkStyle}>
             About Us
           </a>
-          <a href="/" className={linkStyle}>
+          <a href="/services" className={linkStyle}>
             Services
           </a>
           <a href="/" className={linkStyle}>
             Project
           </a>
-          <a href="/" className={linkStyle}>
+          <a href="/contact" className={linkStyle}>
             Contact Us
           </a>
         </motion.nav>

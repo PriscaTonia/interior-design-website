@@ -1,5 +1,6 @@
 ---
 import Navbar from '../components/navbar.tsx'
+import Footer from '../components/footer.tsx'
 
 export interface LayoutProps {
   title : string 
@@ -27,7 +28,11 @@ const { title } = Astro.props as LayoutProps
       <Navbar client:load/>
       <slot/>
       <!-- All different pages to be rendered here -->
+      <Footer />
     </main>
+    <p class="tracking-tight text-base text-center border border-gray-300 bg-white py-10 lg:text-[22px] lg:leading-[33px] font-jost text-text-gray">
+        Copyright © Interno | Designed by Onwudebelu Prisca Ebubechukwu
+    </p>
   </body>
 </html>
 

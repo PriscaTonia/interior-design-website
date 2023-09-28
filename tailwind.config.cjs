@@ -9,6 +9,9 @@ module.exports = {
       backgroundImage: {
         hero: "url('/banner.png')",
         main: "url('/Background.jpg')",
+        about: "url('/aboutpage-bg.png')",
+        services: "url('/servicespage-bg.jpg')",
+        contact: "url('/contactpage-bg.jpg')",
       },
       fontFamily: {
         dm: ["DM Serif Display", "serif"],
@@ -27,6 +30,7 @@ module.exports = {
           gray: "#4D4F52",
           "gray-100": "#5F5F5F",
           "gray-200": "#4D5053",
+          "gray-300": "#E5E5E5",
         },
       },
     },
