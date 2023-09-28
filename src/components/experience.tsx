@@ -1,7 +1,7 @@
 import CountUp from "react-countup";
 
 const Experience = ({
-  text,
+  text = "Default Text",
   num,
   i,
 }: {
@@ -23,7 +23,6 @@ const Experience = ({
           enableScrollSpy={true}
           scrollSpyDelay={0}
         />
-        {/* {num} */}
       </h5>
       <p className="text-text-gray-200 text-base text-center lg:text-lg font-jost tracking-tight lg:leading-9">
         {text}

@@ -8,7 +8,7 @@ export interface ButtonProps {
 }
 
 const Button = (props: ButtonProps) => {
-  const { variant = "primary", text, type = "button" } = props;
+  const { variant = "primary", text = "Default Text", type = "button" } = props;
 
   const defaultStyles =
     "rounded-[18px] flex capitalize items-center justify-center gap-[9px] w-fit text-white text-base lg:text-lg font-semibold font-['Jost'] leading-snug tracking-tight px-10 py-5 md:px-[54px] md:py-[26px]";

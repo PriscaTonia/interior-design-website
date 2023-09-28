@@ -217,7 +217,7 @@ const experiences = [
 			{
 				experiences.map((exp, i) => {
 					return(
-						<Experience client:load text={exp.text} num={exp.num} i={i} />
+						<Experience text={exp.text} num={exp.num} i={i} client:load />
 					)
 				})
 			}
